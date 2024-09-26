@@ -131,7 +131,7 @@ body {
 
     &__illustration {
         width: 100%;
-        object-fit: contain;
+        object-fit: scale-down;
 
         /* Modifiers */
 
@@ -153,7 +153,8 @@ body {
         background: $clr-purple-500;
     }
 
-    &--manage-platforms {
+    &--manage-platforms,
+    &--audience-growth {
         background: $clr-white;        
     }
 
@@ -178,10 +179,6 @@ body {
 
         color: $clr-white;
         background: $clr-purple-500;
-    }
-
-    &--audience-growth {        
-        background: $clr-white;
     }
 
     &--quicker-content {
@@ -215,13 +212,12 @@ body {
     
     .hero {
         display: grid;
-        grid-template-columns: minmax(25%, 200px) minmax(75%, 800px);//min(25%, 300px) min(75%, 900px);
-        grid-template-rows: 100%;//repeat(2, min(50%, 600px));
+        grid-template-columns: minmax(25%, 200px) minmax(75%, 800px);
+        grid-template-rows: 100%;
 
         max-width: 1000px;
         width: 75dvw;
         max-height: 800px;
-        // height: 100%;
 
         margin: auto;
 
@@ -236,8 +232,8 @@ body {
                 grid-row: 1;
 
                 display: grid;
-                grid-template-columns: repeat(3, 1fr);//repeat(3, min(33%, 400px));
-                grid-template-rows: 50% repeat(2, 25%  - gap);//min(50%, 600px) repeat(2, min(25%, 300px));
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: 50% repeat(2, 25%  - gap);
                 grid-template-areas: 
                     "main               main                    optimize-schedule"
                     "manage-platforms   consistent-schedule     optimize-schedule"
@@ -250,7 +246,7 @@ body {
 
                 display: grid;
                 grid-template-columns: 1fr;
-                grid-template-rows: repeat(2, 50% - gap);//repeat(2, min(50%, 500px));
+                grid-template-rows: repeat(2, 50% - gap);
             }
         }
     }
